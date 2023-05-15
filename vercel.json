@@ -9,7 +9,7 @@
     "routes": [
         {
             "src": "(.*)",
-            "dest": "netflix-ui/src/App.js"
+            "dest": "netflix-ui/src/index.js"
         }
     ]
 }
