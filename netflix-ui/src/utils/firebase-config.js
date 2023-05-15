@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: "react-auth-6788d.appspot.com",
   messagingSenderId: "131797845021",
   appId: "1:131797845021:web:3f7ff4766e2b89ca5d32f4",
-  measurementId: "G-VWPBR1NSLL",
+  measurementId: "G-VWPBR1NSLL"
 };
 
 const app = initializeApp(firebaseConfig);
