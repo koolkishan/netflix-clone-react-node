@@ -2,13 +2,13 @@ import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC1Hf0_rdWLBzDPJPcO9CJN4y6M6-EgKH4",
-  authDomain: "react-auth-6788d.firebaseapp.com",
-  projectId: "react-auth-6788d",
-  storageBucket: "react-auth-6788d.appspot.com",
-  messagingSenderId: "131797845021",
-  appId: "1:131797845021:web:3f7ff4766e2b89ca5d32f4",
-  measurementId: "G-VWPBR1NSLL"
+  apiKey: "AIzaSyA-9ULKBlWdevghDN8ZV0yEI-r2legpVo4",
+  authDomain: "calltech-8c94e.firebaseapp.com",
+  projectId: "calltech-8c94e",
+  storageBucket: "calltech-8c94e.appspot.com",
+  messagingSenderId: "473021741610",
+  appId: "1:473021741610:web:7b86ad1bab6bb4e3d52153",
+  measurementId: "G-TBK5RRHNF5"
 };
 
 const app = initializeApp(firebaseConfig);
