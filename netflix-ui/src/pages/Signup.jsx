@@ -36,16 +36,16 @@ function Signup() {
         <Header login />
         <div className="body flex column a-center j-center">
           <div className="text flex column">
-            <h1>Unlimited movies, TV shows and more.</h1>
-            <h4>Watch anywhere. Cancel anytime.</h4>
+            <h1>Filmes ilimitados, shows de TW e muito mais.</h1>
+            <h4>Assista em qualquer lugar.</h4>
             <h6>
-              Ready to watch? Enter your email to create or restart membership.
+              Prepado para começar? Insira seu e-mail.
             </h6>
           </div>
           <div className="form">
             <input
               type="email"
-              placeholder="Email address"
+              placeholder="Endereço de e-mail"
               onChange={(e) =>
                 setFormValues({
                   ...formValues,
@@ -58,7 +58,7 @@ function Signup() {
             {showPassword && (
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Senha"
                 onChange={(e) =>
                   setFormValues({
                     ...formValues,

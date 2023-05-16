@@ -38,17 +38,17 @@ function Login() {
             <div className="container flex column">
               <input
                 type="text"
-                placeholder="Email"
+                placeholder="E-mail"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Senha"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
               />
-              <button onClick={handleLogin}>Login to your account</button>
+              <button onClick={handleLogin}>Acessar conta</button>
             </div>
           </div>
         </div>
