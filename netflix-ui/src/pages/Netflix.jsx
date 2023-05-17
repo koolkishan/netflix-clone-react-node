@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import backgroundImage from "../assets/home.jpg";
 import MovieLogo from "../assets/homeTitle.webp";
 
@@ -41,35 +42,38 @@ function Netflix() {
   };
 
   return (
-    <Container>
-      <Navbar isScrolled={isScrolled} />
-      <div className="hero">
-        <img
-          src={backgroundImage}
-          alt="background"
-          className="background-image"
-        />
-        <div className="container">
-          <div className="logo">
-            <img src={MovieLogo} alt="Movie Logo" />
-          </div>
-          <div className="buttons flex">
-            <button
-              onClick={() => navigate("/player")}
-              className="flex j-center a-center"
-            >
-              <FaPlay />
-              Assistir
-            </button>
-            <button className="flex j-center a-center">
-              <AiOutlineInfoCircle />
-              Mais informações
-            </button>
+    <div>
+      <Container>
+        <Navbar isScrolled={isScrolled} />
+        <div className="hero">
+          <img
+            src={backgroundImage}
+            alt="background"
+            className="background-image"
+          />
+          <div className="container">
+            <div className="logo">
+              <img src={MovieLogo} alt="Movie Logo" />
+            </div>
+            <div className="buttons flex">
+              <button
+                onClick={() => navigate("/player")}
+                className="flex j-center a-center"
+              >
+                <FaPlay />
+                Assistir
+              </button>
+              <button className="flex j-center a-center">
+                <AiOutlineInfoCircle />
+                Mais informações
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <Slider movies={movies} />
-    </Container>
+        <Slider movies={movies} />
+      </Container>
+    <Footer className="footer-fixed"/>
+    </div>
   );
 }
 

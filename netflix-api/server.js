@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/netflix", {
+  .connect("mongodb+srv://Admin:Hur3141%402718@calltech.masa2pi.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
