@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +14,7 @@ export default function UserListedMovies() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [email, setEmail] = useState(undefined);
+  const [email, setEmail] = useState(null);
 
   onAuthStateChanged(firebaseAuth, (currentUser) => {
     if (currentUser) setEmail(currentUser.email);
@@ -25,7 +25,7 @@ export default function UserListedMovies() {
     if (email) {
       dispatch(getUsersLikedMovies(email));
     }
-  }, [email]);
+  }, [email,dispatch]);
 
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);

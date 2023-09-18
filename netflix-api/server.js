@@ -8,8 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// const mongoURI = process.env.MONGO_URI
+
 mongoose
-  .connect("mongodb://localhost:27017/netflix", {
+  .connect('mongodb+srv://Mayank033023:033023829@cluster0.65es8es.mongodb.net/', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
