@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import CardSlider from "../components/CardSlider";
+// import CardSlider from "../components/CardSlider";
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 import { useNavigate } from "react-router-dom";
@@ -22,13 +22,13 @@ function TVShows() {
 
   useEffect(() => {
     if (!genres.length) dispatch(getGenres());
-  }, []);
+  }, [dispatch,genres.length]);
 
   useEffect(() => {
     if (genresLoaded) {
       dispatch(fetchMovies({ genres, type: "tv" }));
     }
-  }, [genresLoaded]);
+  }, [genresLoaded,dispatch,genres]);
 
   const [user, setUser] = useState(undefined);
 
@@ -41,6 +41,9 @@ function TVShows() {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
+  if (dataLoading){
+    return <div>Loading...</div>
+  }
 
   return (
     <Container>
@@ -50,6 +53,7 @@ function TVShows() {
         {movies.length ? (
           <>
             <Slider movies={movies} />
+            {/* <CardSlider movies={movies} /> */}
           </>
         ) : (
           <h1 className="not-available">

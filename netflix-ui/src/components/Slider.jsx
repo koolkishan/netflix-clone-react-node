@@ -5,6 +5,7 @@ export default function Slider({ movies }) {
   const getMoviesFromRange = (from, to) => {
     return movies.slice(from, to);
   };
+  // console.log(movies);
   return (
     <Container>
       <CardSlider data={getMoviesFromRange(0, 10)} title="Trending Now" />
